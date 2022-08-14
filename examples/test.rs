@@ -1,10 +1,15 @@
+#![allow(dead_code)]
+
 use typeenum::HasVariant;
 
 #[derive(HasVariant)]
 enum Many {
     String(String),
+    NotUsed { a: (), b: ((), ()) },
     I32(i32),
+    AlsoNotUsed(),
     USize { x: usize },
+    StillNotUsed(),
 }
 
 fn main() {
