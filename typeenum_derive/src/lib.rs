@@ -11,6 +11,21 @@ fn single<T>(mut i: impl Iterator<Item = T>) -> Option<T> {
     }
 }
 
+/// Dervies `HasVariant` for an enum. **Note: it ignores variants
+/// with multiple or no contents**. Currently does not support
+/// generics nor lifetimes.
+///
+/// For example:
+///
+/// ```
+/// #[derive(HasVariant)]
+/// enum MyEnum {
+///     Integer(i32),
+///     String(String),
+/// }
+/// ```
+///
+/// `MyEnum` now implements `HasVariant<i32>` and `HasVariant<String>`.
 #[proc_macro_derive(HasVariant)]
 pub fn has_variant_derive(input: TokenStream) -> TokenStream {
     let input = parse_macro_input!(input as DeriveInput);
