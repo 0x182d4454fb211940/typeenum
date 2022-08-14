@@ -1,0 +1,16 @@
+[package]
+name = "typeenum_derive"
+version = "0.1.0"
+authors = ["0x182d4454fb211940"]
+edition = "2021"
+description = "Derive macro for `typeenum`."
+readme = "README.md"
+repository = "https://github.com/0x182d4454fb211940/typeenum"
+license = "MIT"
+
+[lib]
+proc_macro = true
+
+[dependencies]
+quote = "1.0"
+syn = "1.0"

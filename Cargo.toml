@@ -1,0 +1,23 @@
+[package]
+name = "typeenum"
+version = "0.1.0"
+authors = ["0x182d4454fb211940"]
+edition = "2021"
+description = "Interact with an enum type via traits."
+readme = "README.md"
+repository = "https://github.com/0x182d4454fb211940/typeenum"
+license = "MIT"
+keywords = ["data", "macro", "derive", "no_std"]
+categories = ["no-std"]
+
+[workspace]
+members = ["typeenum_derive"]
+
+[dependencies.typeenum_derive]
+version = "0.1.0"
+path = "./typeenum_derive"
+optional = true
+
+[features]
+default = ["derive"]
+derive = ["dep:typeenum_derive"]
