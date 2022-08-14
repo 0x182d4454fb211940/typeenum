@@ -1,6 +1,6 @@
 [package]
 name = "typeenum"
-version = "0.1.0"
+version = "0.1.1"
 authors = ["0x182d4454fb211940"]
 edition = "2021"
 description = "Interact with an enum type via traits."

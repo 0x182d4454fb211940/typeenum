@@ -1,5 +1,6 @@
 //! Interact with an enum type via traits.
 
+#[cfg(feature = "derive")]
 pub use typeenum_derive::HasVariant;
 
 /// Signifies this type functions like an enum with variant `T`. This
